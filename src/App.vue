@@ -65,11 +65,11 @@ export default {
 			this.ss = 0;
 			this.mm = 0;
 			this.hh = 0;
-			this.clearHistory();
+			this.history = [];
 		},
 		
 		clear: function() {
-			this.clearHistory();
+			this.history = [];
 		},
 
 		runCountdown: function() {
@@ -90,15 +90,6 @@ export default {
 			+ (this.ss < 10 ? '0' + this.ss : this.ss);
 			return this.number = format;
 		},
-		clearHistory: function() {
-			var contador = this.history.length;
-			var i = 0;
-
-			while(i < contador) {
-				this.history.pop();
-				i++;
-			}
-		}
 	}
 }
 </script>
