@@ -14,16 +14,14 @@
 			</div>
 		</div>
 
-		<div v-show="this.history.length > 0" class="history-area">
-			<h4>Historico de pausas</h4>
-			<div class="history-single" v-for="(historySingle, index) in this.history" :key="index">
-				Você pausou em: {{historySingle}}
-			</div>
-		</div>
+		<History :history="this.history" />
+		
 	</div>
 </template>
 
 <script>
+
+import History from './components/History';
 
 export default {
 	name: 'App',
@@ -39,7 +37,7 @@ export default {
 		}
 	},
 	components: {
-		
+		History
 	},
 	methods: {
 		
