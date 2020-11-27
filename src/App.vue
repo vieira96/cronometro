@@ -51,7 +51,9 @@ export default {
 				clearInterval(this.timer);
 				this.timer = null;
 				this.button = 'CONTINUAR';
-				this.history.push(this.number)
+				if(this.number !== '00:00:00'){
+					this.history.push(this.number)
+				}
 			}
 		},
 		
